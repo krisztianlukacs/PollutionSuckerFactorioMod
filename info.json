@@ -1,0 +1,9 @@
+{
+  "name": "PollutionSucker",
+  "version": "0.1.0",
+  "title": "Pollution Sucker",
+  "author": "Antigravity",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0", "space-age"],
+  "description": "A mod that sucks pollution, cleans it, and releases fresh air."
+}
