@@ -2,7 +2,7 @@ data:extend({
   {
     type = "technology",
     name = "pollution-sucker-tech",
-    icon = "__base__/graphics/technology/oil-processing.png", -- Placeholder
+    icon = "__PollutionSucker__/graphics/technology/pollution-sucker-tech.png",
     icon_size = 256,
     effects = {
       {

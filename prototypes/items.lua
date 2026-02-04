@@ -2,7 +2,7 @@ data:extend({
   {
     type = "item",
     name = "pollution-sucker",
-    icon = "__base__/graphics/icons/assembling-machine-1.png",
+    icon = "__PollutionSucker__/graphics/icons/pollution-sucker-icon.png",
     icon_size = 64,
     subgroup = "production-machine",
     order = "a[pollution-sucker]",
@@ -12,7 +12,7 @@ data:extend({
   {
     type = "item",
     name = "air-cleaner-factory",
-    icon = "__base__/graphics/icons/oil-refinery.png",
+    icon = "__PollutionSucker__/graphics/icons/air-cleaner-factory-icon.png",
     icon_size = 64,
     subgroup = "production-machine",
     order = "b[air-cleaner-factory]",
@@ -22,7 +22,7 @@ data:extend({
   {
     type = "item",
     name = "fresh-air-outlet",
-    icon = "__base__/graphics/icons/electric-furnace.png",
+    icon = "__PollutionSucker__/graphics/icons/fresh-air-outlet-icon.png",
     icon_size = 64,
     subgroup = "production-machine",
     order = "c[fresh-air-outlet]",

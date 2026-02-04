@@ -7,7 +7,7 @@ data:extend({
     heat_capacity = "0.1kJ",
     base_color = {r=0.2, g=0.2, b=0.2},
     flow_color = {r=0.5, g=0.5, b=0.5},
-    icon = "__base__/graphics/icons/fluid/steam.png", -- Placeholder
+    icon = "__PollutionSucker__/graphics/icons/polluted-air-icon.png",
     icon_size = 64,
     order = "a[fluid]-a[polluted-air]",
     pressure_to_speed_ratio = 0.4,
@@ -22,7 +22,7 @@ data:extend({
     heat_capacity = "0.1kJ",
     base_color = {r=0.8, g=1, b=1},
     flow_color = {r=0.9, g=1, b=1},
-    icon = "__base__/graphics/icons/fluid/steam.png", -- Placeholder
+    icon = "__PollutionSucker__/graphics/icons/clean-air-icon.png",
     icon_size = 64,
     order = "a[fluid]-b[clean-air]",
     pressure_to_speed_ratio = 0.4,

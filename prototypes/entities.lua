@@ -1,23 +1,9 @@
-local function make_placeholder_layer(width, height, color)
-  return {
-    filename = "__base__/graphics/entity/iron-chest/iron-chest.png", -- Placeholder
-    priority = "extra-high",
-    width = 32,
-    height = 32,
-    scale = math.min(width, height), -- Scale to fit roughly? No, let's just use a simple sprite.
-    -- Better placeholder: just a colored square if possible, or standard entity scaled up.
-    -- Using a simple tinted sprite for now.
-    tint = color,
-    shift = {0, 0}
-  }
-end
-
 data:extend({
   -- Pollution Sucker (1x1)
   {
     type = "assembling-machine",
     name = "pollution-sucker",
-    icon = "__base__/graphics/icons/assembling-machine-1.png",
+    icon = "__PollutionSucker__/graphics/icons/pollution-sucker-icon.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.2, result = "pollution-sucker"},
@@ -47,15 +33,29 @@ data:extend({
     },
     graphics_set = {
       animation = {
-        filename = "__base__/graphics/entity/assembling-machine-1/assembling-machine-1.png",
-        priority = "high",
-        width = 108,
-        height = 114,
-        frame_count = 32,
-        line_length = 8,
-        shift = util.by_pixel(0, 2),
-        scale = 0.5, -- 1x1 roughly
-        tint = {r=1, g=0.5, b=0.5} -- Reddish
+        layers = {
+          {
+            filename = "__PollutionSucker__/graphics/entity/pollution-sucker.png",
+            priority = "high",
+            width = 64,
+            height = 64,
+            frame_count = 1,
+            line_length = 1,
+            shift = {0, 0},
+            scale = 1
+          },
+          {
+            filename = "__PollutionSucker__/graphics/entity/pollution-sucker-shadow.png",
+            priority = "high",
+            width = 96,
+            height = 64,
+            frame_count = 1,
+            line_length = 1,
+            shift = {0.5, 0},
+            scale = 1,
+            draw_as_shadow = true
+          }
+        }
       }
     },
     fixed_recipe = "suck-pollution"
@@ -65,7 +65,7 @@ data:extend({
   {
     type = "assembling-machine",
     name = "air-cleaner-factory",
-    icon = "__base__/graphics/icons/oil-refinery.png",
+    icon = "__PollutionSucker__/graphics/icons/air-cleaner-factory-icon.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 1, result = "air-cleaner-factory"},
@@ -126,15 +126,29 @@ data:extend({
     },
     graphics_set = {
       animation = {
-        filename = "__base__/graphics/entity/oil-refinery/oil-refinery.png",
-        priority = "high",
-        width = 337,
-        height = 255,
-        frame_count = 1,
-        line_length = 1,
-        shift = {0, 0},
-        scale = 2, -- Scale up to look big
-        tint = {r=1, g=0.2, b=0.2} -- Red
+        layers = {
+          {
+            filename = "__PollutionSucker__/graphics/entity/air-cleaner-factory.png",
+            priority = "high",
+            width = 768,
+            height = 384,
+            frame_count = 1,
+            line_length = 1,
+            shift = {0, 0},
+            scale = 0.5
+          },
+          {
+            filename = "__PollutionSucker__/graphics/entity/air-cleaner-factory-shadow.png",
+            priority = "high",
+            width = 1024,
+            height = 512,
+            frame_count = 1,
+            line_length = 1,
+            shift = {2, 1},
+            scale = 0.5,
+            draw_as_shadow = true
+          }
+        }
       }
     }
   },
@@ -145,7 +159,7 @@ data:extend({
     -- Furnace is good because it shows flame/working state easily, but assembling machine is more flexible.
     -- Let's use assembling-machine with fixed recipe.
     name = "fresh-air-outlet",
-    icon = "__base__/graphics/icons/electric-furnace.png",
+    icon = "__PollutionSucker__/graphics/icons/fresh-air-outlet-icon.png",
     icon_size = 64,
     flags = {"placeable-neutral", "placeable-player", "player-creation"},
     minable = {mining_time = 0.5, result = "fresh-air-outlet"},
@@ -177,14 +191,29 @@ data:extend({
     },
     graphics_set = {
       animation = {
-        filename = "__base__/graphics/entity/electric-furnace/electric-furnace.png",
-        priority = "high",
-        width = 129,
-        height = 100,
-        frame_count = 1,
-        shift = {0.421875, 0},
-        scale = 1.5, -- 4x4 roughly
-        tint = {r=0.5, g=1, b=0.5} -- Greenish
+        layers = {
+          {
+            filename = "__PollutionSucker__/graphics/entity/fresh-air-outlet.png",
+            priority = "high",
+            width = 256,
+            height = 256,
+            frame_count = 1,
+            line_length = 1,
+            shift = {0, 0},
+            scale = 0.5
+          },
+          {
+            filename = "__PollutionSucker__/graphics/entity/fresh-air-outlet-shadow.png",
+            priority = "high",
+            width = 384,
+            height = 320,
+            frame_count = 1,
+            line_length = 1,
+            shift = {1, 0.5},
+            scale = 0.5,
+            draw_as_shadow = true
+          }
+        }
       }
     },
     fixed_recipe = "release-clean-air"
