@@ -20,11 +20,11 @@ data:extend({
     enabled = false,
     energy_required = 0.1,
     ingredients = {
-      {type = "fluid", name = "polluted-air", amount = 100},
+      {type = "fluid", name = "polluted-air", amount = 1000},
       {type = "fluid", name = "water", amount = 500}
     },
     results = {
-      {type = "fluid", name = "clean-air", amount = 100},
+      {type = "fluid", name = "clean-air", amount = 1000},
       {type = "fluid", name = "water", amount = 450},
       {type = "item", name = "coal", amount = 1, probability = 0.4},
       {type = "item", name = "iron-ore", amount = 1, probability = 0.4},
@@ -32,9 +32,9 @@ data:extend({
       {type = "item", name = "uranium-ore", amount = 1, probability = 0.4},
       {type = "item", name = "stone", amount = 1, probability = 0.4}
     },
-    -- Note: 0.1s crafting time * 10 amount = 100/sec throughput.
+    -- Note: 0.1s crafting time * 10 amount = 1000/sec clean-air throughput.
     -- Water: 500 * 10 = 5000/sec input. 450 * 10 = 4500/sec output.
-    -- Random items: 1 * 10 = 10/sec total expected (sum of probs = 1.0).
+    -- Random items: 1 * 10 = 10/sec total expected (sum of probs = 2.0).
     main_product = "clean-air"
   },
   -- Release Clean Air Recipe
