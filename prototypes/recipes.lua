@@ -8,7 +8,7 @@ data:extend({
     energy_required = 1,
     ingredients = {},
     results = {
-      {type = "fluid", name = "polluted-air", amount = 100}
+      {type = "fluid", name = "polluted-air", amount = 1000}
     },
     hidden = true -- Auto-processed by the machine
   },
@@ -20,17 +20,17 @@ data:extend({
     enabled = false,
     energy_required = 0.1,
     ingredients = {
-      {type = "fluid", name = "polluted-air", amount = 10},
+      {type = "fluid", name = "polluted-air", amount = 100},
       {type = "fluid", name = "water", amount = 500}
     },
     results = {
-      {type = "fluid", name = "clean-air", amount = 10},
+      {type = "fluid", name = "clean-air", amount = 100},
       {type = "fluid", name = "water", amount = 450},
-      {type = "item", name = "coal", amount = 1, probability = 0.2},
-      {type = "item", name = "iron-ore", amount = 1, probability = 0.2},
-      {type = "item", name = "copper-ore", amount = 1, probability = 0.2},
-      {type = "item", name = "uranium-ore", amount = 1, probability = 0.2},
-      {type = "item", name = "stone", amount = 1, probability = 0.2}
+      {type = "item", name = "coal", amount = 1, probability = 0.4},
+      {type = "item", name = "iron-ore", amount = 1, probability = 0.4},
+      {type = "item", name = "copper-ore", amount = 1, probability = 0.4},
+      {type = "item", name = "uranium-ore", amount = 1, probability = 0.4},
+      {type = "item", name = "stone", amount = 1, probability = 0.4}
     },
     -- Note: 0.1s crafting time * 10 amount = 100/sec throughput.
     -- Water: 500 * 10 = 5000/sec input. 450 * 10 = 4500/sec output.
@@ -45,7 +45,7 @@ data:extend({
     enabled = false,
     energy_required = 1,
     ingredients = {
-      {type = "fluid", name = "clean-air", amount = 100}
+      {type = "fluid", name = "clean-air", amount = 1000}
     },
     results = {},
     icon = "__base__/graphics/icons/fluid/steam.png", -- Placeholder icon

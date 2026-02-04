@@ -176,7 +176,7 @@ data:extend({
     energy_source = {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = { pollution = -200 } -- Negative emissions to clean pollution!
+      emissions_per_minute = { pollution = -2000 } -- Negative emissions to clean pollution!
     },
     fluid_boxes = {
       {
